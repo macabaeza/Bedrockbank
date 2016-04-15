@@ -20,7 +20,8 @@ namespace Bedrockbank
     public class Account
     {
         #region Variables
-        private static int lastAccountNumber= 0;
+        private static int lastAccountNumber = 0;
+        #endregion
         #region Properties
 
         /// <summary>
@@ -33,7 +34,7 @@ namespace Bedrockbank
         public int AccountNumber { get; private set; }
         public int SSN { get; set; }
         public double Balance { get; private set; }
-        public AccountType TypeofAccount { get; set}
+        public AccountType TypeofAccount { get; set; }
         #endregion
         #region Constructor
         public Account()

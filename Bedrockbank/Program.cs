@@ -22,7 +22,7 @@ namespace Bedrockbank
 
             var account2 = new Account();
             account2.AccountName = "My savings";
-            account2.TypeofAccount = AccountType.savings;
+            account2.TypeofAccount = AccountType.Savings;
             //account1.Balance = 100000000;
             // account1.AccountNumber = 123456 ;
             account2.Deposite(100.00);
