@@ -10,25 +10,31 @@ namespace Bedrockbank
     {
         static void Main(string[] args)
         {
-            // Creating a instance of Account
-            var account1 = new Account();
-            account1.AccountName = "My checking";
-            account1.TypeofAccount = AccountType.Checking;
-            //account1.Balance = 100000000;
-           // account1.AccountNumber = 123456 ;
-            account1.Deposite(300.00);
-            Console.WriteLine("Account Name: {0}, Number: {1}, Type of Account:{2}, Balance: {3:c}",
-            account1.AccountName, account1.AccountNumber, account1.TypeofAccount, account1.Balance);
+            Console.WriteLine("******Welcome to Bedrock bank ****");
+            Console.WriteLine("1.Create an account");
+            Console.WriteLine("2. Deposite into an account");
+            Console.WriteLine("0.Exit");
 
-            var account2 = new Account();
-            account2.AccountName = "My savings";
-            account2.TypeofAccount = AccountType.Savings;
-            //account1.Balance = 100000000;
-            // account1.AccountNumber = 123456 ;
-            account2.Deposite(100.00);
-            Console.WriteLine("Account Name: {0}, Number: {1}, Type of Account:{2}, Balance: {3:c}",
-            account2.AccountName, account2.AccountNumber, account2.TypeofAccount, account2.Balance);
+            var option = Console.ReadLine();
+            switch (option)
+            {
+                case "1":
+                    Console.Write("What is the name of the account?");
+                    var accountName= Console.ReadLine();
+                    var account1 = Bank.createAccount(accountName, 123343, AccountType.Checking);
+                    Console.WriteLine("Account Name: {0}, Number: {1}, Type of Account:{2}, Balance: {3:c}",
+           account1.AccountName, account1.AccountNumber, account1.TypeofAccount, account1.Balance);
+                    break;
+                case "2":
+                    break;
+                case "0":
+                    Console.WriteLine("Good bye!");
+                    return;
 
+                        
+                default:
+                    break;
+            }
 
         }
     }

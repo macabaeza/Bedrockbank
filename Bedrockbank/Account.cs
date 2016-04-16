@@ -22,6 +22,7 @@ namespace Bedrockbank
         #region Variables
         private static int lastAccountNumber = 0;
         #endregion
+
         #region Properties
 
         /// <summary>
