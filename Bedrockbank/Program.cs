@@ -34,7 +34,7 @@ namespace Bedrockbank
                     case "2":
                         break;
                     case "3":
-                        PrintAccounts();
+                       // PrintAccounts();
                         break;
                     case "0":
                         Console.WriteLine("Good bye!");
@@ -47,14 +47,14 @@ namespace Bedrockbank
 
         }
 
-        static void PrintAccounts()
-        {
-            foreach (var account in Bank.accounts)
-            {
-                Console.WriteLine("Id:{0}, Name:{1}",
-                    account.AccountNumber, account.AccountName);
-            }
-        }
+        //static void PrintAccounts()
+        //{
+        //    foreach (var account in Bank.accounts)
+        //    {
+        //        Console.WriteLine("Id:{0}, Name:{1}",
+        //            account.AccountNumber, account.AccountName);
+        //    }
+        //}
     }
 }
             

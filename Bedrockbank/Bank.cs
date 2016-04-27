@@ -10,7 +10,7 @@ namespace Bedrockbank
     {
 
         #region variables
-        public static List<Account> accounts = new List<Account>();
+        private static BankModel db = new BankModel();
 
         #endregion
         /// <summary>
@@ -29,7 +29,8 @@ namespace Bedrockbank
                 SSN = ssn,
                 TypeofAccount = typeofAccount
             };
-            accounts.Add(account);
+            db.Accounts.Add(account);
+            db.SaveChanges();
             return account;
         }
       
