@@ -13,6 +13,11 @@ namespace Bedrockbank
         private static BankModel db = new BankModel();
 
         #endregion
+
+        public static Customer findCustomer(string emailAddress)
+        {
+           return db.Customers.Where(c => c.CustomerEmail == emailAddress).FirstOrDefault();
+        }
         /// <summary>
         /// Create a new account
         /// </summary>
@@ -20,14 +25,17 @@ namespace Bedrockbank
         /// <param name="ssn">Your Social Security number</param>
         /// <param name="typeofAccount"> your Type of your account</param>
         /// <returns> A new account</returns>
-        public static Account createAccount(string accountName, int ssn,AccountType typeofAccount)
+        /// // i need to create customer associated to Customer
+        public static Account createAccount(string accountName, int ssn,AccountType typeofAccount, Customer customer)
 
         {
             var account = new Account
             {
                 AccountName = accountName,
                 SSN = ssn,
-                TypeofAccount = typeofAccount
+                TypeofAccount = typeofAccount,
+                Customer = customer
+                
             };
             db.Accounts.Add(account);
             db.SaveChanges();

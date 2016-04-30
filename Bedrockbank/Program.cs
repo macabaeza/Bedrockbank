@@ -27,9 +27,14 @@ namespace Bedrockbank
                     case "1":
                         Console.Write("What is the name of the account?");
                         var accountName = Console.ReadLine();
-                        var account1 = Bank.createAccount(accountName, 123343, AccountType.Checking);
-                        Console.WriteLine("Account Name: {0}, Number: {1}, Type of Account:{2}, Balance: {3:c}",
-               account1.AccountName, account1.AccountNumber, account1.TypeofAccount, account1.Balance);
+
+                        Console.Write(" What is your email addrees?");
+                        var emailAddress = Console.ReadLine();
+                        Bank.findCustomer = Console.ReadLine();
+                        var customer = Bank.findCustomer(emailAddress);
+                        var account1 = Bank.createAccount(accountName, 123343, AccountType.Checking, customer);
+                        Console.WriteLine("Account Name: {0}, Number: {1}, Type of Account:{2}, Balance: {3:c},customer:{4}",
+               account1.AccountName, account1.AccountNumber, account1.TypeofAccount, account1.Balance, account1.Customer);
                         break;
                     case "2":
                         break;
