@@ -40,7 +40,7 @@ namespace Bedrockbank
         public double Balance { get; private set; }
         public AccountType TypeofAccount { get; set; }
         // building a virtual relationship with Account assosiated to one Customer 
-        // do not need to create a customer Id
+        // do not need to have customer Id here in account.cs
         public virtual Customer Customer { get; set; }
         #endregion
         #region Constructor

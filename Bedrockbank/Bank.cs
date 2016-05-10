@@ -16,7 +16,9 @@ namespace Bedrockbank
 
         public static Customer findCustomer(string emailAddress)
         {
-           return db.Customers.Where(c => c.CustomerEmail == emailAddress).FirstOrDefault();
+           return db.Customers.Where(
+               c => c.CustomerEmail == emailAddress)
+               .FirstOrDefault();
         }
         /// <summary>
         /// Create a new account
@@ -26,7 +28,8 @@ namespace Bedrockbank
         /// <param name="typeofAccount"> your Type of your account</param>
         /// <returns> A new account</returns>
         /// // i need to create customer associated to Customer
-        public static Account createAccount(string accountName, int ssn,AccountType typeofAccount, Customer customer)
+        public static Account createAccount(string accountName, int ssn,
+            AccountType typeofAccount, Customer customer)
 
         {
             var account = new Account
