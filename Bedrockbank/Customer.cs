@@ -11,8 +11,11 @@ namespace Bedrockbank
     {
         [Key]
         public int CustomerId { get; set; }
+
         public string CustomerName { get; set; }
+
         public string CustomerEmail { get; set; }
+        
         //multiples accounts for one customer, that is a interfaces that follow an especific patterns
         public virtual ICollection<Account> Accounts { get; set; }
     }

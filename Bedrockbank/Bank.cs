@@ -20,6 +20,17 @@ namespace Bedrockbank
                c => c.CustomerEmail == emailAddress)
                .FirstOrDefault();
         }
+        public static Customer CreateCustomer(string name, string emailAddress)
+        {
+            var customer = new Customer
+            {
+                CustomerName = name,
+                CustomerEmail = emailAddress
+            };
+            db.Customers.Add(customer);
+            db.SaveChanges();
+            return customer;
+        }
         /// <summary>
         /// Create a new account
         /// </summary>
