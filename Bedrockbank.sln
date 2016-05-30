@@ -5,6 +5,8 @@ VisualStudioVersion = 14.0.24720.0
 MinimumVisualStudioVersion = 10.0.40219.1
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Bedrockbank", "Bedrockbank\Bedrockbank.csproj", "{15C073E4-3179-47DE-A5FF-B093E8E70122}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "BedrockBankUI", "BedrockBankUI\BedrockBankUI.csproj", "{7E6FA816-128C-4D44-81BA-A9F010146BA7}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -15,6 +17,10 @@ Global
 		{15C073E4-3179-47DE-A5FF-B093E8E70122}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{15C073E4-3179-47DE-A5FF-B093E8E70122}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{15C073E4-3179-47DE-A5FF-B093E8E70122}.Release|Any CPU.Build.0 = Release|Any CPU
+		{7E6FA816-128C-4D44-81BA-A9F010146BA7}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{7E6FA816-128C-4D44-81BA-A9F010146BA7}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{7E6FA816-128C-4D44-81BA-A9F010146BA7}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{7E6FA816-128C-4D44-81BA-A9F010146BA7}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE

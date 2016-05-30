@@ -28,19 +28,33 @@ namespace Bedrockbank
                 {
                     case "1":
 
-                        customer = VerifyCustomer();
+                        
                         try
                         {
+                            customer = VerifyCustomer();
                             Console.Write("What is the name of the account?");
                             var accountName = Console.ReadLine();
+                            Console.WriteLine("What type of account do you need?");
+                            Console.WriteLine("1.Checking");
+                            Console.WriteLine("2.Savings");
+                            var typeOfAccount = Console.ReadLine();
+                            AccountType accountType= AccountType.Savings;
+                            if (typeOfAccount == "1")
+                            {
+                                accountType = AccountType.Checking;
+                            }
+
 
                             var account1 = Bank.createAccount(accountName, 123343,
-                                AccountType.Checking, customer);
+                                accountType, customer);
                             Console.WriteLine("Account Name: {0}, Number: {1}, Type of Account:{2}, Balance: {3:c},customer:{4}",
                    account1.AccountName, account1.AccountNumber, account1.TypeofAccount, account1.Balance, account1.Customer);
 
                         }
-
+                        catch(ArgumentNullException ax)
+                        {
+                            Console.WriteLine("Failed - {0}", ax.ParamName  );
+                        }
                         catch (DbEntityValidationException dx)
                         {
                             Console.WriteLine("Failed creating an account - {0}", dx.Message);

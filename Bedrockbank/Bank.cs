@@ -16,6 +16,11 @@ namespace Bedrockbank
 
         public static Customer findCustomer(string emailAddress)
         {
+            if (string.IsNullOrEmpty(emailAddress))
+            {
+                throw new ArgumentNullException
+                    ("email address cannot be empty.");
+            }
            return db.Customers.Where(
                c => c.CustomerEmail == emailAddress)
                .FirstOrDefault();
@@ -38,7 +43,8 @@ namespace Bedrockbank
         /// <param name="ssn">Your Social Security number</param>
         /// <param name="typeofAccount"> your Type of your account</param>
         /// <returns> A new account</returns>
-        /// // i need to create customer associated to Customer
+       
+            /// // i need to create an account associated to a Customer
         public static Account createAccount(string accountName, int ssn,
             AccountType typeofAccount, Customer customer)
 
